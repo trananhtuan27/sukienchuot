@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img id="myImage" src="quabong.jpeg" style="width: 400px"/>
+    <p>Click button below to move the image to right</p>
+    <input type="button" value="click me" onclick="moveRigh()"/>
+    <script>
+        var quabong =null;
+        quabong = document.getElementById('myImage');
+        function init() {
+            quabong=document.getElementById('myImage');
+            quabong.style.position ='relative';
+            quabong.style.left ='0px'
+        }
+        function moveRigh() {
+            quabong.style.left =parseInt(quabong.style.left) +20 +'px';
+        }
+        window.onload =init;
+
+    </script>
+
+</form>
+</body>
+</html>
